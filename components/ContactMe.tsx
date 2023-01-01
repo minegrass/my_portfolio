@@ -7,7 +7,7 @@ import SendIcon from "./icons/send";
 export default function ContactMe() {
   return (
     <div className="p-5" id="ContactMe">
-      <div className="mb-5">
+      <div className="mb-5 flex justify-center items-center flex-col">
         <div className="text-4xl font-bold">Contact Me</div>
         <div className="text-xl">You can reach me by</div>
       </div>

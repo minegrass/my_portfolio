@@ -13,7 +13,7 @@ export default function MoreMe() {
   const [opened, setOpened] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mb-16">
       <a
         onClick={() => {
           setOpened((prev) => !prev);

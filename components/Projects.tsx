@@ -47,7 +47,7 @@ export default function Projects() {
 
   return (
     <>
-      <div id="projects" className="flex flex-col mt-16 relative">
+      <div id="projects" className="flex flex-col relative mb-16">
         <div>
           <div className="flex flex-col gap-y-5 justify-center text-3xl font-bold items-center">
             <div className="block text-4xl font-bold">Projects</div>
