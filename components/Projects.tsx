@@ -88,32 +88,40 @@ export default function Projects() {
                   </div>
                 );
               })}
-              <button
-                className="p-0.5 bg-main-pink opacity-70 rounded-full text-white absolute bottom-32 left-0"
-                onClick={backRepo}
-              >
-                <Leftchev />
-              </button>
-              <button
-                className="p-0.5 bg-main-pink opacity-70 rounded-full text-white absolute bottom-32 right-0"
-                onClick={nextRepo}
-              >
-                <Rightchev />{" "}
-              </button>
             </div>
           </div>
         </div>
+
         <div className="flex flex-row gap-x-3 items-center justify-center">
+          <button
+            className="hover:opacity-100 p-0.5 shadow-md bg-main-pink border-r-2 border-b-2 border-main-dark opacity-70 rounded-full text-white "
+            onClick={backRepo}
+          >
+            <Leftchev />
+          </button>
           {Array(repo.length)
             .fill(0)
-            .map((_, i) => (
-              <div
-                key={i}
-                className={`${
-                  visibleNo == i ? "bg-main-pink" : "bg-main-dark"
-                } w-2 h-2 rounded-full`}
-              ></div>
-            ))}
+            .map((_, i) => {
+              const size = 0.4 + i * 0.1;
+              return (
+                <div
+                  onClick={() => {
+                    setVisibleNo(i);
+                  }}
+                  key={i}
+                  style={{ height: `${size}rem`, width: `${size}rem` }}
+                  className={`${
+                    visibleNo == i ? "bg-main-pink" : "bg-main-dark"
+                  } rounded-full hover:cursor-pointer`}
+                ></div>
+              );
+            })}
+          <button
+            className="hover:opacity-100 p-0.5 shadow-md border-r-2 border-b-2 border-main-dark bg-main-pink opacity-70 rounded-full text-white"
+            onClick={nextRepo}
+          >
+            <Rightchev />{" "}
+          </button>
         </div>
       </div>
     </>
