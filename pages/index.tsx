@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
+import MoreMe from "../components/MoreMe";
+import { time } from "console";
 export default function Home() {
   return (
     <>
@@ -22,6 +24,9 @@ export default function Home() {
           <AboutMe />
         </div>
         <div className="flex justify-center items-center">
+          <MoreMe />
+        </div>
+        <div className="flex justify-center items-center">
           <Projects />
         </div>
         <div>
@@ -29,7 +34,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="flex justify-center items-center text-gray-500 p-10 pb-5">
-        ©Copyright 2022 Tomato Wilbur Yap
+        ©Copyright {new Date().getFullYear()} Tomato Wilbur Yap
       </footer>
     </>
   );
