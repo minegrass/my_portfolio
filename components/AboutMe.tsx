@@ -6,13 +6,16 @@ import Discord from "./icons/discord";
 
 export default function AboutMe() {
   return (
-    <div className="flex flex-row gap-x-10 p-24" id="AboutMe">
-      <div className="flex flex-col justify-center text-3xl font-bold">
-        <div className="text-5xl">
-          <h1 className="-mb-12">Tomato Wilbur Yap</h1>
+    <div
+      className="flex flex-col-reverse items-center lg:flex-row gap-x-10 p-10 lg:p-24"
+      id="AboutMe"
+    >
+      <div className="flex flex-col justify-center text-xl font-bold">
+        <div className="text-2xl text-center md:text-5xl">
+          <h1 className="-mb-8 mt-2  md:-mb-12 ">Tomato Wilbur Yap</h1>
           <h1 className="wave-animation text-main-pink">Tomato Wilbur Yap</h1>
         </div>
-        <ul className="items-center flex flex-col mt-2">
+        <ul className="text-center items-center flex flex-col mt-2">
           <li>
             <a>Software Engineering Student</a>
           </li>
@@ -46,7 +49,7 @@ export default function AboutMe() {
           alt="my-face"
           width={1024}
           height={1024}
-          className="rounded-full w-80 h-80"
+          className="rounded-full w-40 h-40 md:w-80 md:h-80"
           src="/TomatoFace.png"
         />
       </div>

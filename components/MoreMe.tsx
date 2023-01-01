@@ -25,22 +25,22 @@ export default function MoreMe() {
       <div
         className={`${
           opened ? "block" : "hidden"
-        } animation-grow-down bg-main-grey font-bold text-main-white shadow-lg p-10 mt-2 rounded-md `}
+        } animation-grow-down bg-main-grey font-bold text-main-white shadow-lg p-5 lg:p-10 mt-2 rounded-md `}
       >
         <div>
           {myInfo.map((section, index) => {
             return (
               <div key={index} className="mb-2">
-                <div className="text-xl">{section.title} :</div>
-                <ul className="flex flex-row gap-x-5 mt-3 items-center px-5 text-xl">
+                <div className="text-m lg:text-xl">{section.title} :</div>
+                <ul className="flex flex-row gap-x-2 lg:gap-x-5 mt-3 items-center text-xl">
                   {section.data.map((item, index) => {
                     return (
                       <li key={index} className="group relative">
-                        <div className="absolute -top-5 left-3 opacity-80 text-main-pink hidden group-hover:block ">
+                        <div className="text-sm lg:text-lg absolute -top-5 left-3 opacity-80 text-main-pink hidden group-hover:block ">
                           {item.alt}
                         </div>
                         <Image
-                          className="p-2 bg-main-white rounded-full w-24 h-24"
+                          className="p-1 bg-main-white rounded-full w-[40px] h-[40px] lg:w-24 lg:h-24"
                           src={item.src}
                           alt={item.alt}
                           width={1024}

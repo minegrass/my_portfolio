@@ -14,7 +14,7 @@ export default function navbar() {
             <a
               key={index}
               href={item.href}
-              className="p-2 hover:bg-main-white hover:text-main-pink transition-all duration-300 ease-in-out "
+              className="p-2 hover:bg-main-white hover:text-main-pink text-xs md:text-xl transition-all duration-300 ease-in-out "
             >
               {item.title}
             </a>
